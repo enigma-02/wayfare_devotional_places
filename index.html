@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wayfare - Devotional Trip</title>
+    <link rel="stylesheet" href="destination_style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /*
+        The CSS below should be saved in 'style.css' or put here.
+        I will provide the final CSS block separately.
+        */
+    </style>
+</head>
+<body>
+    
+    <div class="background-color-devotional"></div>
+    
+    <div class="main-wrapper box-container">
+        <header class="navbar">
+            <div class="logo"><a href="index.html">Wayfare.</a></div>
+            <nav>
+                <a href="#">Back to Categories</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <div class="content-card destination-header devotional-card">
+            <i class="fas fa-om page-icon"></i>
+            <h1 class="page-title">Sacred Journeys: Devotional Destinations</h1>
+            <p class="page-intro">
+                Find peace and spiritual awakening. These locations are centers of faith, history, and profound reverence.
+            </p>
+        </div>
+
+        <div class="destinations-container">
+            
+            <div class="destination-box" data-destination="varanasi">
+                <h3 class="box-title">Varanasi</h3>
+                <p class="box-location"><i class="fas fa-map-marker-alt"></i> Uttar Pradesh, India</p>
+                <p class="box-description">India's spiritual capital on the Ganges, known for its ghats and ancient temples.</p>
+            </div>
+
+            <div class="destination-box" data-destination="goldentemple">
+                <h3 class="box-title">Golden Temple</h3>
+                <p class="box-location"><i class="fas fa-map-marker-alt"></i> Amritsar, India</p>
+                <p class="box-description">The holiest shrine of Sikhism, famous for its stunning architecture and serene Sarovar (pool).</p>
+            </div>
+
+            <div class="destination-box" data-destination="vatican">
+                <h3 class="box-title">The Vatican City</h3>
+                <p class="box-location"><i class="fas fa-map-marker-alt"></i> Rome, Italy </p>
+                <p class="box-description">The global center of the Catholic Church, home to St. Peter's Basilica and unparalleled art.</p>
+            </div>
+
+            <div class="destination-box" data-destination="mecca">
+                <h3 class="box-title">Mecca</h3>
+                <p class="box-location"><i class="fas fa-map-marker-alt"></i> Saudi Arabia </p>
+                <p class="box-description">The holiest city in Islam and the focus of the annual Hajj pilgrimage to the Kaaba.</p>
+            </div>
+
+            <div class="destination-box" data-destination="bodhgaya">
+                <h3 class="box-title">Bodh Gaya</h3>
+                <p class="box-location"><i class="fas fa-map-marker-alt"></i> Bihar, India</p>
+                <p class="box-description">The site where the Buddha attained enlightenment under the Bodhi tree.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.destination-box').forEach(box => {
+            box.addEventListener('click', function() {
+                const destination = this.getAttribute('data-destination');
+                alert(`Redirecting to details page for: ${destination.toUpperCase()}.`);
+                // window.location.href = `details.html?dest=${destination}`; 
+            });
+        });
+    </script>
+</body>
+</html>
